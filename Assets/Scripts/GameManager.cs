@@ -19,9 +19,9 @@ public class GameManager : MonoBehaviour
     {
         var randomLevel = Random.Range(0, levelPresets.Length);
 
-        foreach (var position in levelPresets[randomLevel].CubePositions)
+        foreach (var cube in levelPresets[randomLevel].Cubes)
         {
-            CubeFactory.Instance.CreateCube(position);
+            CubeFactory.Instance.CreateCube(cube.Position, cube.Number);
         }
     }
 }

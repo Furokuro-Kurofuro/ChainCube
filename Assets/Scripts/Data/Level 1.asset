@@ -10,10 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8d196cb63c70514488cb0186b849722, type: 3}
-  m_Name: Level 2
+  m_Name: Level 1
   m_EditorClassIdentifier: 
-  CubePositions:
-  - {x: -0.046, y: 0.5, z: 3.7959645}
-  - {x: -0.047, y: 1.549, z: 3.7959645}
-  - {x: -0.039, y: 2.583, z: 3.7959645}
-  - {x: -0.041, y: 3.624, z: 3.7959645}
+  Cubes:
+  - Position: {x: -1.1769238, y: 0.5, z: 3.9628708}
+    Number: 2
+  - Position: {x: -0.071, y: 0.5, z: 3.9628708}
+    Number: 4
+  - Position: {x: 1.02, y: 0.5, z: 3.9628708}
+    Number: 8
+  - Position: {x: -0.071, y: 1.612, z: 3.9628708}
+    Number: 16

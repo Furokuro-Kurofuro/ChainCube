@@ -22,13 +22,15 @@ public class CubeFactory : MonoBehaviour, ICubeFactory
         cubes = new List<Cube>();
     }
 
-    public Cube CreateCube(Vector3 position)
+    public Cube CreateCube(Vector3 position, int number)
     {
         var newCube = Instantiate(cubePrefab, position, Quaternion.identity);
         
         cubes.Add(newCube);
         
         newCube.transform.position = position;
+
+        newCube.SetNumber(number);
         
         return newCube;
     }
