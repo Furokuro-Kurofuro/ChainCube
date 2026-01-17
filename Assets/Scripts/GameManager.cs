@@ -1,18 +1,27 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private LevelPreset[] levelPresets;
+
+    private void Start()
     {
-        
+        RestartLevel();
+    }
+    
+    private void RestartLevel()
+    {
+        CubeFactory.Instance.ClearAll();
+        InitialPlacement();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void InitialPlacement()
     {
-        
+        var randomLevel = Random.Range(0, levelPresets.Length);
+
+        foreach (var position in levelPresets[randomLevel].CubePositions)
+        {
+            CubeFactory.Instance.CreateCube(position);
+        }
     }
 }

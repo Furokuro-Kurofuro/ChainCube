@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27a7f051e6eaadf4485625d8bbd467d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cubePrefab: {fileID: 6203765888806727956, guid: 3fff873d3d167d14f94471cfcf99af80, type: 3}
+  cubePrefab: {fileID: 6203765888806727956, guid: 3fff873d3d167d14f94471cfcf99af80, type: 3}
 --- !u!4 &95526829
 Transform:
   m_ObjectHideFlags: 0
@@ -1234,6 +1234,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 959052356}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1754494254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1754494256}
+  - component: {fileID: 1754494255}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1754494255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754494254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcbfb3ee2dbe7d84ab3182938201b414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelPresets:
+  - {fileID: 11400000, guid: b5b70b9a15c7e864fbd088b2b286c5b9, type: 2}
+  - {fileID: 11400000, guid: cc1ab96812d20274397e4c2599ebf0a2, type: 2}
+--- !u!4 &1754494256
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754494254}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2127195593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,3 +1394,4 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 959052356}
   - {fileID: 95526829}
+  - {fileID: 1754494256}

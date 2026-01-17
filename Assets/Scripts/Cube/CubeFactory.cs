@@ -1,15 +1,43 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CubeFactory : MonoBehaviour, ICubeFactory
 {
-    [SerializeField] private Cube _cubePrefab;
+    public static CubeFactory Instance {get; private set;}
     
+    [SerializeField] private Cube cubePrefab;
+    
+    private List<Cube> cubes;
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        
+        Instance = this;
+        
+        cubes = new List<Cube>();
+    }
+
     public Cube CreateCube(Vector3 position)
     {
-        var newCube = Instantiate(_cubePrefab, position, Quaternion.identity);
+        var newCube = Instantiate(cubePrefab, position, Quaternion.identity);
+        
+        cubes.Add(newCube);
         
         newCube.transform.position = position;
         
         return newCube;
+    }
+
+    public void ClearAll()
+    {
+        foreach (var cube in cubes)
+            Destroy(cube);
+        
+        cubes.Clear();
     }
 }

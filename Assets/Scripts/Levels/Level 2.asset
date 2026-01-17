@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d196cb63c70514488cb0186b849722, type: 3}
   m_Name: Level 2
   m_EditorClassIdentifier: 
-  _cubePositions:
-  - {x: 0.068, y: 0.49999976, z: 4.124}
-  - {x: 0.066, y: 1.545, z: 4.124}
-  - {x: 0.067, y: 2.596, z: 4.124}
-  - {x: 0.06, y: 3.636, z: 4.124}
+  CubePositions:
+  - {x: -0.046, y: 0.5, z: 3.7959645}
+  - {x: -0.047, y: 1.549, z: 3.7959645}
+  - {x: -0.039, y: 2.583, z: 3.7959645}
+  - {x: -0.041, y: 3.624, z: 3.7959645}
