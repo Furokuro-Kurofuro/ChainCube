@@ -1,14 +1,19 @@
 ﻿using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody), typeof(MeshRenderer))]
 public class Cube : MonoBehaviour
 {
+    private CubeVisualConfig visualConfig;
+    
     private int CubeNumber { get; set; }
 
     private Rigidbody rb;
+    private MeshRenderer mr;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        mr = GetComponent<MeshRenderer>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,14 +28,29 @@ public class Cube : MonoBehaviour
 
                 CubeNumber *= 2;
                 
+                SetMaterial(CubeNumber, visualConfig);
+                
                 AddForce();
             }
         }
     }
 
-    public void SetNumber(int number)
+    public void Initialize(int number, CubeVisualConfig visualConfig)
+    {
+        this.visualConfig = visualConfig;
+        
+        SetNumber(number);
+        SetMaterial(number, visualConfig);
+    }
+    
+    private void SetNumber(int number)
     {
         CubeNumber = number;
+    }
+
+    private void SetMaterial(int number, CubeVisualConfig visualConfig)
+    {
+        mr.material = visualConfig.GetMaterial(number);
     }
 
     private void AddForce()

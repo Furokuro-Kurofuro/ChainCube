@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8548422bda843be4ebad4e2a7f6fdc5d, type: 3}
+  m_Name: CubeVisualConfig
+  m_EditorClassIdentifier: 
+  visualCubes:
+  - Number: 2
+    Material: {fileID: 2100000, guid: f1ec3fd86dc22da48879d14660e862ee, type: 2}
+  - Number: 4
+    Material: {fileID: 2100000, guid: e343baaf1621d7f409f3ad9dddc5610d, type: 2}
+  - Number: 8
+    Material: {fileID: 2100000, guid: 941fbcab5f444a9488669ab7fc5e89b0, type: 2}
+  - Number: 16
+    Material: {fileID: 2100000, guid: 1f88e2ba3b79eac408f0aadc08a4d240, type: 2}
+  - Number: 32
+    Material: {fileID: 2100000, guid: 028201432f859b446a233fe8ccd1747c, type: 2}
+  - Number: 64
+    Material: {fileID: 2100000, guid: bb55ca10f8c2d16458a56060a6d2c8e3, type: 2}
+  - Number: 128
+    Material: {fileID: 2100000, guid: d1daabaa407e6df4c9995e4c53015a9f, type: 2}
+  - Number: 256
+    Material: {fileID: 2100000, guid: d7227618d98c2554f81f38d2ad72b6b8, type: 2}
+  - Number: 512
+    Material: {fileID: 2100000, guid: 7bb7761dcce7dbb449a1b0a3932b632a, type: 2}
+  - Number: 1024
+    Material: {fileID: 2100000, guid: d8c36b5e658b3cd4e89b878c6c84d90b, type: 2}
+  - Number: 2048
+    Material: {fileID: 2100000, guid: ed79918e4e9f1a0489bb7b305fbe76e5, type: 2}
+  - Number: 4096
+    Material: {fileID: 2100000, guid: cf15a74175946074c89d19bbe5126f9c, type: 2}

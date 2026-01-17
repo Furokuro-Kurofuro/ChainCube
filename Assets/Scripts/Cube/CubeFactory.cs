@@ -8,6 +8,8 @@ public class CubeFactory : MonoBehaviour, ICubeFactory
     [SerializeField] private Cube cubePrefab;
     
     private List<Cube> cubes;
+    
+    [SerializeField] private CubeVisualConfig visualConfig;
 
     private void Awake()
     {
@@ -30,7 +32,7 @@ public class CubeFactory : MonoBehaviour, ICubeFactory
         
         newCube.transform.position = position;
 
-        newCube.SetNumber(number);
+        newCube.Initialize(number, visualConfig);
         
         return newCube;
     }
