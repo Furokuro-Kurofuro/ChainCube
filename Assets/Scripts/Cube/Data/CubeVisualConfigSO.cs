@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "CubeVisualConfig")]
-public class CubeVisualConfig : ScriptableObject
+public class CubeVisualConfigSO : ScriptableObject
 {
     [SerializeField] private CubeVisualData[] visualCubes;
 

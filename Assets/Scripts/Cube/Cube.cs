@@ -3,7 +3,7 @@
 [RequireComponent(typeof(Rigidbody), typeof(MeshRenderer))]
 public class Cube : MonoBehaviour
 {
-    private CubeVisualConfig visualConfig;
+    private CubeVisualConfigSO visualConfigSo;
     
     private int CubeNumber { get; set; }
 
@@ -28,19 +28,19 @@ public class Cube : MonoBehaviour
 
                 CubeNumber *= 2;
                 
-                SetMaterial(CubeNumber, visualConfig);
+                SetMaterial(CubeNumber, visualConfigSo);
                 
                 AddForce();
             }
         }
     }
 
-    public void Initialize(int number, CubeVisualConfig visualConfig)
+    public void Initialize(int number, CubeVisualConfigSO visualConfigSo)
     {
-        this.visualConfig = visualConfig;
+        this.visualConfigSo = visualConfigSo;
         
         SetNumber(number);
-        SetMaterial(number, visualConfig);
+        SetMaterial(number, visualConfigSo);
     }
     
     private void SetNumber(int number)
@@ -48,9 +48,9 @@ public class Cube : MonoBehaviour
         CubeNumber = number;
     }
 
-    private void SetMaterial(int number, CubeVisualConfig visualConfig)
+    private void SetMaterial(int number, CubeVisualConfigSO visualConfigSo)
     {
-        mr.material = visualConfig.GetMaterial(number);
+        mr.material = visualConfigSo.GetMaterial(number);
     }
 
     private void AddForce()

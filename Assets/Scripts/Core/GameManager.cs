@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private LevelPreset[] levelPresets;
+    [SerializeField] private LevelPresetConfigSO[] levelPresets;
 
     private void Start()
     {

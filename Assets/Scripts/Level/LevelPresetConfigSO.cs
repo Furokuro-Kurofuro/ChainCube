@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "LevelPreset")]
-public class LevelPreset : ScriptableObject
+public class LevelPresetConfigSO : ScriptableObject
 {
     public List<CubePresetData> Cubes;
 }
